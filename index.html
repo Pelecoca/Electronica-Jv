@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELECTRÓNICA JV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">ELECTRÓNICA JV</div>
+      <div class="nav-links">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+      <button class="cart-button" onclick="toggleCart()">
+        🛒 <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <h1>Reparación y venta de aparatos electrónicos</h1>
+    <p>En ELECTRÓNICA JV encuentras equipos de sonido, televisores, computadoras y más. ¡Confía en nuestros expertos!</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="productos">
+    <h2 class="section-title">Nuestros Productos</h2>
+    <div class="products-grid" id="products-grid">
+      <!-- Los productos se cargarán con JavaScript -->
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicios" class="services-section">
+    <h2 class="section-title">Servicios Técnicos</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📺</div>
+        <h3>Reparación de TV</h3>
+        <p>Servicio técnico especializado en televisores.</p>
+        <button class="button button-whatsapp" onclick="requestService('Reparación de TV')">Solicitar Servicio</button>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>Reparación de Computadores</h3>
+        <p>Mantenimiento y reparación de equipos.</p>
+        <button class="button button-whatsapp" onclick="requestService('Reparación de Computadores')">Solicitar Servicio</button>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎵</div>
+        <h3>Equipos de Sonido</h3>
+        <p>Reparación de sistemas de audio.</p>
+        <button class="button button-whatsapp" onclick="requestService('Equipos de Sonido')">Solicitar Servicio</button>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Electrodomésticos</h3>
+        <p>Reparación de electrodomésticos.</p>
+        <button class="button button-whatsapp" onclick="requestService('Electrodomésticos')">Solicitar Servicio</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="contact-section">
+    <h2 class="section-title">Contáctanos</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3>Teléfono</h3>
+        <p>+57 313 762 1044</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h3>Email</h3>
+        <p>contacto@electronicajv.com</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>Dirección</h3>
+        <p>Calle 8 #8-21, SAMANÁ CALDAS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>Electrónica JV</h3>
+          <p>Expertos en reparación y venta de equipos electrónicos.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Horario de Atención</h3>
+          <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+          <p>Sábados y Domingos: 9:00 AM - 4:00 PM</p>
+        </div>
+        <div class="footer-section">
+          <h3>Síguenos</h3>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Electrónica JV. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Carrito -->
+  <div class="modal" id="cart-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Carrito de Compras</h2>
+        <button class="close-button" onclick="toggleCart()">×</button>
+      </div>
+      <div id="cart-items">
+        <!-- Los items del carrito se cargarán con JavaScript -->
+      </div>
+      <div class="cart-total" style="margin-top: auto;">
+        <p>Total: <span id="cart-total">$0.00</span></p>
+        <button class="button button-whatsapp" onclick="checkout()">Comprar por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
